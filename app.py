@@ -4,8 +4,6 @@ import numpy as np
 import pickle
 import shap
 import matplotlib.pyplot as plt
-import plotly.graph_objects as go
-import plotly.express as px
 
 st.set_page_config(page_title="ChurnGuard AI", page_icon="🛡️", layout="wide")
 
@@ -144,9 +142,13 @@ with tab1:
     col_plot1, col_plot2 = st.columns(2)
     with col_plot1:
         st.subheader("Risk Distribution")
-        fig = px.histogram(df_raw, x="Risk_Score", nbins=20, color_discrete_sequence=['#7C3AED'],
-                           labels={'Risk_Score': 'Churn Risk Score'})
-        st.plotly_chart(fig, use_container_width=True)
+        # Use Streamlit native chart instead of Plotly to avoid dependency issues
+        risk_hist, bin_edges = np.histogram(df_raw['Risk_Score'], bins=20, range=(0, 1))
+        chart_data = pd.DataFrame({
+            "Churn Risk Score": bin_edges[:-1],
+            "Count": risk_hist
+        }).set_index("Churn Risk Score")
+        st.bar_chart(chart_data, color="#7C3AED")
         
     with col_plot2:
         st.subheader("Global Feature Importance (SHAP)")

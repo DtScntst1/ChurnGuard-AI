@@ -1,19 +1,15 @@
 # ChurnGuard AI
 
-Predict, Explain, and Prevent Customer Churn using Explainable AI (XAI).
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Machine_Learning-Scikit_Learn-F7931E?logo=scikit-learn&logoColor=white)
 
-## Features
-- Executive Dashboard: High-level overview of churn risk.
-- - Customer Analysis: Detailed breakdown of individual customer risk.
-  - - What-If Simulator: Predict how changes in customer behavior affect churn probability.
-    - - XAI (SHAP): Understand the "why" behind every prediction.
-     
-      - ## Tech Stack
-      - - Python, Streamlit, XGBoost, SHAP, Pandas, Scikit-learn.
-       
-        - ## How to Run
-        - 1. Clone the repository.
-          2. 2. Install dependencies: pip install -r requirements.txt
-             3. 3. Run the app: streamlit run app.py
-                4. 
-                
+ChurnGuard AI is an advanced predictive modeling project aimed at predicting customer churn. By analyzing behavioral and transactional data, this system identifies at-risk customers, allowing businesses to take proactive retention measures.
+
+## Overview
+- **Problem:** High customer acquisition costs make retention a critical metric.
+- - **Solution:** A classification model that calculates a churn probability score for each customer.
+  - - **Techniques:** SMOTE for imbalanced data, feature scaling, and Hyperparameter tuning via Optuna.
+   
+    - ## Tech Stack
+    - - **Modeling:** XGBoost, LightGBM, Scikit-Learn
+      - - **Data Analysis:** Pandas, Plotly

@@ -3,6 +3,9 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Machine_Learning-Scikit_Learn-F7931E?logo=scikit-learn&logoColor=white)
 
+![App Mockup](https://files.catbox.moe/u6309m.png)
+
+
 An advanced predictive modeling project identifying at-risk customers to enable proactive retention measures.
 
 ## 💡 Overview
